@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @deesea-projects
+- 👋 Hi, I’m @datajourn
 - 👀 I’m interested in Python
 - 🌱 I’m currently learning about Github Pages
 
