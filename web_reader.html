@@ -46,17 +46,40 @@
 								<p>I'm using Flask to serve the web app, so I've included the server_web.py file that calls the web reader's methods.</p>
 								
 								<h2>Product Page</h2>
-								<p>The Web_Reader.read_product() method </p>
-								
-								<h2>Category Search</h2>
-								<p></p>
+								<p>The Web_Reader.read_product() method reads the Amazon web page and creates a Beautiful Soup object that contains all the tags and text in the webpage. We can now search through the web page represented in the object to find the information we need.</p>
+								<p>Here is what the Product Details section of the example page looks like:</p>
+								<div class="image"><img src="images/web_reader/product_details.jpg" alt="Product Details" /></div>
+								<p>In this example, we want to get the Best Sellers Rank (BSR) of the book, which in this case is #1,717. This number fluctuates daily, and even hourly on the Amazon site, relative to the other products available on the store - so you will probably see a different number when you look at that page.</p>
+
+
+								<p>When we inspect the product page, we'll see this HTML below:</p>
+								<div class="image"><img src="images/web_reader/inspect_product.jpg" alt="Inspect Product" /></div>
+
+								<p>We can find() the div we need in the soup object with this line of code:</p>
+
+								<code>feature_div = soup2.find(id='detailBullets_feature_div')</code>
+								<br><br>
+								<p>Once we have the div we need, we can find all unordered list items (ul) in the div, and then loop through them looking for the span that contains the best sellers rank that we need for the product.</p>
+
+
+								<h2>Category Page</h2>
+								<p>A Category page is a page on Amazon where you've entered the category in the Amazon Store you'd like to explore, for example 'Games Programming' and Amazon provides a best sellers list like this:</p>
+								<div class="image"><img src="images/web_reader/category_page.jpg" alt="Category Page" /></div>
+
+
+								<p>Our Category search reads through the URLs on the page, then calls the Web_Reader.read_product() method, which goes to each product's page to find its best seller rank. You can see the results below:</p>
+
 								<div class="image"><img src="images/web_reader/category.jpg" alt="Category search" /></div>
+								<br>
 								
 								<h2>Keyword Search</h2>
-								<p></p>
-								<div class="image"><img src="images/web_reader/category.jpg" alt="Category search" /></div>
+								<p>A keyword search page is similar to a category page, but instead of using a category that is provided by Amazon, you type keywords into the top bar. The keywords search page looks like this:</p>
+								
+								<div class="image"><img src="images/web_reader/keywords_page.jpg" alt="Keywords Page" /></div>
+								<br>
+								<p>Similar to a Category search, the keyword search method looks through all the product pages for their best seller ranks:</p>
+								<div class="image"><img src="images/web_reader/keywords.jpg" alt="Keywords search" /></div>
 
-								<p>.</p>
 							</section>
 
 					</div>
