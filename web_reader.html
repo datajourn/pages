@@ -40,13 +40,13 @@
 									<p></p>
 								</header>
 								<h2>Introduction</h2>
-								<p>Let's take a look at how to read information from a website using Python and Beautiful Soup. I've chosen to read the Amazon website since it's a very popular website containing a lot of interesting information.</p>
+								<p>Let's look at how we can read information from a website using Python and Beautiful Soup. I've chosen to read the Amazon website since it's a popular e-commerce website.</p>
 
 								<h2>Environment</h2>
 								<p>I'm using Flask to serve the web app, so I've included the server_web.py file that calls the web reader's methods.</p>
 								
 								<h2>Product Page</h2>
-								<p>The Web_Reader.read_product() method reads the Amazon web page and creates a Beautiful Soup object that contains all the tags and text in the webpage. We can now search through the web page represented in the object to find the information we need.</p>
+								<p>The Web_Reader.read_product() method reads the Amazon web page and creates a Beautiful Soup object that contains all the tags and text in the webpage. We can now search through the web page represented in the Beautiful Soup object to find the information we need.</p>
 								<p>Here is what the Product Details section of the example page looks like:</p>
 								<div class="image"><img src="images/web_reader/product_details.jpg" alt="Product Details" /></div>
 								<p>In this example, we want to get the Best Sellers Rank (BSR) of the book, which, in this case, is #1,717. This number fluctuates daily - and even hourly - on the Amazon site relative to the other products available on the store, so you will probably see a different number when you look at that page.</p>
@@ -59,7 +59,7 @@
 
 								<code>feature_div = soup2.find(id='detailBullets_feature_div')</code>
 								<br><br>
-								<p>Once we have the div we need, we can find all unordered list items (ul) in the div, and then loop through them looking for the span that contains the best sellers rank that we need for the product.</p>
+								<p>Once we have the div we need, we can find all unordered list items (ul) in the div and then loop through them looking for the span that contains the best sellers rank that we need for the product.</p>
 
 
 								<h2>Category Page</h2>
