@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Datajourn</title>
+		<title>Read the Web with Python</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -14,8 +14,8 @@
 
 				<!-- Header -->
 					<header id="header">
-						<a href="index.html" class="logo">Datajourn</a>
-						<p>Tools for Data Analysts and Journalists.</p>
+						<a href="index.html" class="logo">Web3forge</a>
+						<p>Tools for Analysts and Journalists.</p>
 					</header>
 
 				<!-- Nav -->
@@ -40,7 +40,7 @@
 									<p></p>
 								</header>
 								<h2>Introduction</h2>
-								<p>Let's take a look at how to read information from a website, using Python and Beautiful Soup. I've chosen to read the Amazon website, since it's a very popular website, containing a lot of interesting information.</p>
+								<p>Let's take a look at how to read information from a website using Python and Beautiful Soup. I've chosen to read the Amazon website since it's a very popular website containing a lot of interesting information.</p>
 
 								<h2>Environment</h2>
 								<p>I'm using Flask to serve the web app, so I've included the server_web.py file that calls the web reader's methods.</p>
@@ -49,9 +49,9 @@
 								<p>The Web_Reader.read_product() method reads the Amazon web page and creates a Beautiful Soup object that contains all the tags and text in the webpage. We can now search through the web page represented in the object to find the information we need.</p>
 								<p>Here is what the Product Details section of the example page looks like:</p>
 								<div class="image"><img src="images/web_reader/product_details.jpg" alt="Product Details" /></div>
-								<p>In this example, we want to get the Best Sellers Rank (BSR) of the book, which in this case is #1,717. This number fluctuates daily, and even hourly on the Amazon site, relative to the other products available on the store - so you will probably see a different number when you look at that page.</p>
+								<p>In this example, we want to get the Best Sellers Rank (BSR) of the book, which, in this case, is #1,717. This number fluctuates daily - and even hourly - on the Amazon site relative to the other products available on the store, so you will probably see a different number when you look at that page.</p>
 
-
+								
 								<p>When we inspect the product page, we'll see this HTML below:</p>
 								<div class="image"><img src="images/web_reader/inspect_product.jpg" alt="Inspect Product" /></div>
 
@@ -63,7 +63,7 @@
 
 
 								<h2>Category Page</h2>
-								<p>A Category page is a page on Amazon where you've entered the category in the Amazon Store you'd like to explore, for example 'Games Programming' and Amazon provides a best sellers list like this:</p>
+								<p>A Category page is a page on Amazon where you've entered the category in the Amazon Store you'd like to explore, for example, 'Games Programming' and Amazon provides a best sellers list like this:</p>
 								<div class="image"><img src="images/web_reader/category_page.jpg" alt="Category Page" /></div>
 
 
@@ -73,7 +73,7 @@
 								<br>
 								
 								<h2>Keyword Search</h2>
-								<p>A keyword search page is similar to a category page, but instead of using a category that is provided by Amazon, you type keywords into the top bar. The keywords search page looks like this:</p>
+								<p>A keyword search page is similar to a category page, but instead of using a category provided by Amazon, you would type keywords into the top bar. The keywords search page looks like this:</p>
 								
 								<div class="image"><img src="images/web_reader/keywords_page.jpg" alt="Keywords Page" /></div>
 								<br>
